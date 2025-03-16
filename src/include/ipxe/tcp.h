@@ -359,7 +359,9 @@ struct tcp_options {
  *
  * We therefore choose a (rounded up) maximum window size of 2048kB.
  */
-#define TCP_MAX_WINDOW_SIZE	( 2048 * 1024 )
+
+// Test with 256kB re: github thread about performance being better for 256kb than 2mb.
+#define TCP_MAX_WINDOW_SIZE	( 256 * 1024 )
 
 /**
  * Path MTU
